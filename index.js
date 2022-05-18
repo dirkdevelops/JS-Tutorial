@@ -97,3 +97,36 @@ if (myName === 'Dirk'){
 else {
     console.log("I am not Dirk");
 }
+
+// Template Strings & Escaped Characters
+var firstName = 'Dirk';
+
+var helloString = `<h1> ${firstName} </h1>`;
+
+// how to space something with a string
+var paragraph5 = 'first paragraph \n second paragraph \n third paragraph';
+// each \n is a new line and \t is a tab
+console.log(paragraph5);
+
+var paragraph4 = `
+    first paragraph
+    second paragraph
+    third paragraph
+    `;
+
+console.log(paragraph4);
+// another way of doing this
+
+// writing HTML in JS
+
+var paragraphs = `
+    <div>
+        <h1> Hello ${firstName} </h1>
+        <p> I hope you are doing well</p>
+    </div>
+
+`;
+
+console.log(paragraphs)
+
+// can create dynamic HTML with variance in our code but do not forget backstroke
