@@ -64,3 +64,36 @@ else {
 }
 
 // even numbers are exactly divisble by 2 with a remainder of 0, so use remainder opeator 
+
+// Lesson 5.5 Strings
+let myName = 'Dirk';
+let myMiddleName = "Dominic";
+let myLastName = `Noyahr`;
+// strings can be single quoates, double quotes, and the thing above the tab button
+
+let myFriendsName = 'Peter'; //String interpolation with thing above tab button (backtick)
+let myFriendsFullName = `${myFriendsName} Rogers`;
+console.log(myFriendsFullName);
+
+// Indexing
+console.log(myName[0]);
+// how you can get specific letters
+
+// Interpolation
+console.log(`${myName} ${myLastName}`);
+
+// Concatenation
+console.log(myName + ' ' + myMiddleName);
+
+// String Method - measure the length
+console.log(myName.length);
+
+
+// testing strings (String equality boolean)
+if (myName === 'Dirk'){
+    console.log("I am Dirk");
+}
+
+else {
+    console.log("I am not Dirk");
+}
