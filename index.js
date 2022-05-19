@@ -160,3 +160,45 @@ console.log(last);
 const newNums = [2,4,6,8];
 newNums [0] = 0;
 console.log(newNums);
+
+// Lesson 5.8 - Objects
+
+const name = "Dirk";
+const age = 26;
+const hasJob = true;
+// can use objects because they all relate to one thing or in this case one person
+
+const user = {
+ name : "Dirk",
+ age : 26,
+ hasJob : true,
+ socialMedia: {
+     twitter:"dnoyahr",
+     facebook: "dirknoyahr",
+ }
+};
+
+// key : value; the value can be a string, boolean or number but it can arrays, others objects or functions
+
+console.log(user);
+// user. (name, age, hasJob, socialMedia) --> dot syntax
+
+console.log(user['name']);
+// String Literal Syntax
+
+const key = 'name';
+console.log(user[key]);
+// making key equivalent to name and printing it (Variable Syntax)
+
+// How to change object properties
+console.log(user.age);
+user.age = 27; //reassign the variables
+console.log(user.age);
+
+// const does not apply to compound data types so you can reassign each property but NOT the variable itself i.e. user
+
+// how to get userobjects and chain things together
+
+console.log(user.socialMedia.twitter);
+
+// document is the most important object in JS, can access it on any webpage, it represents any webpage
