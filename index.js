@@ -77,6 +77,7 @@ console.log(myFriendsFullName);
 
 // Indexing
 console.log(myName[0]);
+
 // how you can get specific letters
 
 // Interpolation
@@ -130,3 +131,32 @@ var paragraphs = `
 console.log(paragraphs)
 
 // can create dynamic HTML with variance in our code but do not forget backstroke
+
+// Lesson 5.7 Arrays (compound data types)
+
+const nums = [1,2,3];
+
+// array properties
+
+console.log(nums.length);
+console.log(nums[0]);
+
+//how to add to an array on a seperate line
+
+nums.push(4);
+console.log (nums);
+
+//how to remove from an array on a seperate line
+nums.pop(4);
+console.log(nums);
+
+// pop can remove the last stored item
+const last = nums.pop ()
+console.log(nums);
+console.log(last); 
+
+//how to edit array on different line
+
+const newNums = [2,4,6,8];
+newNums [0] = 0;
+console.log(newNums);
