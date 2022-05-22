@@ -154,3 +154,108 @@ if (firstName && lastName) {
 console.log(fullName); //Aaron Jack
 
 // inner scopes have access to outside variables but not the other way around --> variables get passed down but not up the scope they are created in
+// In general:
+
+// - we enter a new scope inside the curly brackets { } of an if statement, a loop, or a function
+
+// - think of each new scope as a "level" (sort of like HTML parents and children)
+
+ 
+
+// When using let and const ONLY
+
+// - a variable's scope is based on where it was declared (not assigned)
+
+// - variables can be used on the same level, or in "child" scopes, but not "parent" scopes
+
+ 
+
+// When using var
+
+// The same rules apply, but only inside functions. 
+
+// In other words, variables declared with var "escape" loops & if statements and are available everywhere.
+
+ 
+
+// EXAMPLE
+
+// if (true) { var firstName = "Aaron" }
+
+// console.log( firstName );
+
+// // would print "Aaron"
+
+ 
+
+// if (true) { let lastName = "Jack" }
+
+// console.log( lastName );
+
+// // would print undefined
+
+// Lesson 5.14 Type Detection & Conversion
+
+
+// typeof it used to determine if it is a number or string
+
+const myNum ="123";
+
+if (typeof myNum === 'number'){
+    console.log ('its a number');
+} else if (typeof myNum === 'string') {
+    console.log('its a string');
+}
+
+// cannot detect arrays with typeof must use Array.isArray
+
+const myArr = [1,2,3];
+
+console.log(Array.isArray(myArr));
+
+if (Array.isArray(myArr)){
+    console.log ('array?');
+}
+
+// detecting NaN
+
+console.log(isNan(NaN));
+
+// convert string to number
+
+let myNum ="123";
+
+if (typeof myNum !== 'number'){
+    // convert to numbeer
+    myNum = Number(myNum) // Number function 
+    myNum = +myNum; // use the plus
+}
+
+console.log (typeof myNum, myNum); 
+// type of tells you if it is a number and myNum prints 123
+
+
+// convert number to string
+
+let myNum =123;
+
+if (typeof myNum !== 'string'){
+    // convert to string
+    myNum = String(123); //any number gets converted to a string
+    myNum = myNum.toString(); //tostring function
+
+}
+
+console.log (typeof myNum, myNum); 
+
+// convert to a boolean
+
+let myNum =123;
+
+myNum = Boolean (myNum); 
+
+//can pass in any value a string or number  and it will give either true or false
+// Boolean will convert any truthy value to true and any falsy value to false
+
+
+console.log (typeof myNum, myNum); 
