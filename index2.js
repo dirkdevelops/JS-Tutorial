@@ -102,3 +102,55 @@ else {
 }
 
 // as long as firstname is not undefined and our number is 0 then true
+
+// Equivalence
+
+// === evaluates to true if the two statements are equal
+
+// !== evaluates to true if the two statements are not equal
+
+ 
+
+// Comparison
+
+// && evaluates to true if both statements are true (or truthy)
+
+// || evaluates to true if one or more statements are true (or truthy)
+
+// ! "flips" truthy to false, and falsy to true
+
+ 
+
+// Like normal math we can also use parentheses
+
+// (true && true) || false
+
+// Lesson 5.13 Scope
+
+const firstName = "Aaron"
+const lastName = "Jack"
+
+if (firstName && lastName) {
+    // create full name
+
+    const fullName = `${firstName} ${lastName}`
+
+}
+
+console.log(fullName); // fullName is not defined because any variable created in the brackets of the if statement will not be available on the outer scope (our furthest level to the left)
+
+const firstName = "Aaron"
+const lastName = "Jack"
+
+let fullName = "" or undefined
+
+if (firstName && lastName) {
+    // create full name
+    
+    fullName = `${firstName} ${lastName}`;
+
+}
+
+console.log(fullName); //Aaron Jack
+
+// inner scopes have access to outside variables but not the other way around --> variables get passed down but not up the scope they are created in
