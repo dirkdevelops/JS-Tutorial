@@ -195,6 +195,13 @@ console.log(user.age);
 user.age = 27; //reassign the variables
 console.log(user.age);
 
+// How to add to object on different line
+// user.title = define something
+// user. title = array
+// user.age --> can change the string
+// user[key] --> can change the variable if key is the variable for 'age'
+// user['age'] --> can change variable in string 
+
 // const does not apply to compound data types so you can reassign each property but NOT the variable itself i.e. user
 
 // how to get userobjects and chain things together
@@ -202,3 +209,67 @@ console.log(user.age);
 console.log(user.socialMedia.twitter);
 
 // document is the most important object in JS, can access it on any webpage, it represents any webpage
+
+// Lesson 5.9 - Value vs Reference
+
+const users = [
+    {
+        name: "Aaron",
+        age: 27,
+        tags: ['new-user', 'javascript'],
+
+    },
+
+    { 
+        name: "Phillip"
+        age: 30,
+        tags: ['javascript'],
+
+    },
+
+    {
+        name:"Jan",
+        age: 25,
+        tags: [],
+
+    },
+];
+
+
+
+// returns each user (in array) and each user is an object, we can add objects in  arrays and array in objects
+
+// Value vs Reference
+
+// by value assignment (all primitive) --> setting a variable to a value (string, number, boolean)
+
+let a = 10;
+let b = 'hi';
+let c = a;
+c = c + 10; //c = 11 and a =10 because you are setting a value not a reference; the 10 for c and the 10 for a are completely distinct values
+
+
+
+// by reference --> objects and arrays
+
+let a = 10;
+let b = 'hi';
+let c = [1,2];
+
+// the value of c will not be [1,2] but rather a reference (a memory address) which will hold the value
+
+let d = c;
+// so both c and d will have the same value (a memory address) and it will be the same address for both
+
+d.push(3) //we are adding 3 to our array and in doing this we will change the value of both c and d because they point to the same address
+
+let a = 10;
+let b = 'hi';
+let c = [1,2];
+let d = c;
+d = [3,4,5];
+// the value for c will be one memory address that holds [1,2] and the value for d will be another memory adress that holds [3,4,5]
+// in this case we are only overriding the value of d and not changing anything in c, now if we update c or d it will not effect each other because they are completely different values
+
+// Lesson 5.10 - Undefined, Null, NaN
+
